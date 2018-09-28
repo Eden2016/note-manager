@@ -1,0 +1,118 @@
+// variables
+$border-right: #dcdada;
+$gradient-top: #f6f3f2;
+$gradient-bottom: #f1f1f1;
+$selected-bg: #dbdbdb;
+
+// style
+
+@media (max-width: #{768px}) {
+  .sidebar {
+    min-height: 50%;
+    position: relative;
+    border-bottom: 1px solid $selected-bg;
+  }
+}
+
+.sidebar {
+  min-width: 300px;
+  border-right: 1px solid $border-right;
+  background: linear-gradient(135deg, $gradient-top 0%, $gradient-bottom 100%);
+  font-size: 12px;
+  overflow: hidden;
+  @media (max-width: #{768px}) {
+    .scroll-wrapper {
+      overflow-y: scroll;
+      overflow-x: hidden;
+      display: inline-block;
+      width: 100%;
+      position: absolute;
+      padding-right: 25px;
+      top: 0;
+      bottom: 0;
+      .custom-vertical-scroll {
+        position: absolute;
+        bottom: 2px;
+        display: inline-block;
+        width: 7px;
+        background: rgba(138, 140, 141, 0.5);
+        border-radius: 5px;
+        border: 1px solid #8a8c8d;
+        box-sizing: border-box;
+      }
+    }
+    .directories-list {
+      margin: 0 auto;
+      padding: 16px 0;
+      .directory {
+        list-style: none;
+        height: 26px;
+        min-width: 100%;
+        white-space: nowrap;
+        display: inline-block;
+        background-image: url('/images/black-folder.png');
+        background-repeat: no-repeat;
+        background-size: 18px 15px;
+        box-sizing: border-box;
+        cursor: pointer;
+        input {
+          display: inline-block;
+          margin-top: 4px;
+        }
+        span {
+          display: inline-block;
+          margin-top: 6px;
+        }
+      }
+    }
+  }
+  @media (min-width: #{768px}) {
+    .scroll-wrapper {
+      overflow-y: scroll;
+      overflow-x: hidden;
+      display: inline-block;
+      width: 300px;
+      height: 100%;
+      position: relative;
+      padding-right: 25px;
+      .custom-vertical-scroll {
+        position: absolute;
+        bottom: 2px;
+        display: inline-block;
+        width: 7px;
+        background: rgba(138, 140, 141, 0.5);
+        border-radius: 5px;
+        border: 1px solid #8a8c8d;
+        box-sizing: border-box;
+      }
+    }
+  }
+  .directories-list {
+    margin: 0 auto;
+    padding: 16px 0;
+    .directory {
+      list-style: none;
+      height: 26px;
+      min-width: 100%;
+      white-space: nowrap;
+      display: inline-block;
+      background-image: url('/images/black-folder.png');
+      background-repeat: no-repeat;
+      background-size: 18px 15px;
+      box-sizing: border-box;
+      cursor: pointer;
+      input {
+        display: inline-block;
+        margin-top: 4px;
+      }
+      span {
+        display: inline-block;
+        margin-top: 6px;
+      }
+    }
+    .selected-directory {
+      background-color: $selected-bg;
+      height: 26px
+    }
+  }
+}
